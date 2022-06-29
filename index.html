@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Luca Zammitti</title>
+</head>
+<body>
+  <nav class="nav-box">
+    <nav class="nav-items">
+      <ul>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+      </ul>
+    </nav>
+  </nav>
+  <main>
+    <section class="background-video">
+      <video class="video" style="width:100%;" height="100%" muted autoplay loop>
+        <source src="/images/ex.mp4" type="video/mp4" />
+    </video>
+    </section>
+    <section class="left-column">
+      <h1 class="left-text">I shape digital worlds through design</h1>
+    </section>
+  </main>
+  <div class="cursor">
+    <script>      const cursor = document.querySelector('.cursor');
+
+      document.addEventListener('mousemove', e => {
+          cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+      })
+    
+      document.addEventListener('click', () => {
+          cursor.classList.add("expand");
+    
+          setTimeout(() => {
+              cursor.classList.remove("expand");
+          }, 500)
+      })</script>
+  </div>
+</body>
+</html>
