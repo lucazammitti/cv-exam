@@ -437,8 +437,6 @@ header {
 }
 
 
-
-
 .cursor {
 	width: 40px;
 	height: 40px;
@@ -487,7 +485,3 @@ header {
 	animation: cursorAnim3 .5s forwards;
 	border: 1px solid var(--white-gray);
 }
-
-
-
-
