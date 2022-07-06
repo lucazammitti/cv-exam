@@ -1,47 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Luca Zammitti</title>
-</head>
-<body>
-  <nav class="nav-box">
-    <nav class="nav-items">
-      <ul>
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
-      </ul>
-    </nav>
-  </nav>
-  <main>
-    <section class="background-video">
-      <video class="video" style="width:100%;" height="100%" muted autoplay loop>
-        <source src="/images/ex.mp4" type="video/mp4" />
-    </video>
-    </section>
-    <section class="left-column">
-      <h1 class="left-text">I shape digital worlds through design</h1>
-    </section>
-  </main>
-  <div class="cursor">
-    <script>      const cursor = document.querySelector('.cursor');
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Luca Zammitti</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+	</head>
 
-      document.addEventListener('mousemove', e => {
-          cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-      })
-    
-      document.addEventListener('click', () => {
-          cursor.classList.add("expand");
-    
-          setTimeout(() => {
-              cursor.classList.remove("expand");
-          }, 500)
-      })</script>
-  </div>
-</body>
+	<body id="js-scroll">
+		<div class="wrapper">
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-container">
+						<div class="site-title"><a href="/index.html">zeta.design</a></div>
+						<header>
+							<div>
+								<button class="header__button nav-btn-js" type="button"></button>
+								<nav class="header__nav nav-js" data-active="false">
+									<ul class="header__menu">
+										<li class="header__menu-item"><a href="/index.html">Home</a></li>
+										<li class="header__menu-item"><a href="#">All projects</a></li>
+										<li class="header__menu-item"><a href="/about.html">About me</a></li>
+									</ul>
+								</nav>
+							</div>
+						</header>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="section-header">
+					<div class="section-header-container">
+					</div>
+				</div>
+				<section class="about">
+					<div class="about-container">
+						<p class="about-intro">I shape digital worlds through design and UX</p>
+					</div>
+				</section>
+				<div class="whitespace"></div>
+				<div class="section-header">
+					<div class="section-header-container">
+						<div class="section-title">SEE MY WORKS</div>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<section class="project">
+					<div class="project-container">
+						<div>
+							<nav class="menu">
+								<div class="menu__item">
+									<a href="/cdm.html" class="menu__item-link">Costa del Mar</a>
+									<img class="menu__item-img" src="images/cdm.png" />
+									<div class="marquee">
+										<div class="marquee__inner">
+											<span>Costa del Mar</span>
+											<span>Costa del Mar</span>
+											<span>Costa del Mar</span>
+											<span>Costa del Mar</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="divider"></div>
+
+								<div class="menu__item">
+									<a class="menu__item-link">MONUMENTALE MILANO</a>
+									<img class="menu__item-img" src="images/cimmon.png" />
+									<div class="marquee">
+										<div class="marquee__inner">
+											<span>MONUMENTALE MILANO</span>
+											<span>MONUMENTALE MILANO</span>
+											<span>MONUMENTALE MILANO</span>
+											<span>MONUMENTALE MILANO</span>
+										</div>
+									</div>
+								</div>
+								</nav>
+							</nav>
+						</div>
+					</div>
+				</section>
+
+				<div class="whitespace"></div>
+
+				<div class="section-header">
+					<div class="section-header-container">
+						<div class="section-title">HOW I WORK</div>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<section class="clients">
+					<div class="clients-container">
+						<p class="clients-info">I truly believe that a good design system can be achieved with both technical knowledge and human-centric thinking</p>
+					</div>
+				</section>
+				<div class="whitespace"></div>
+				<div class="section-header">
+					<div class="section-header-container">
+						<div class="section-title">SOCIALS</div>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<section class="socials">
+					<div class="socials-container">
+						<div class="socials-id"><a href="">Instagram</a></div>
+						<div class="socials-id"><a href="">Facebook</a></div>
+						<div class="socials-id"><a href="">Twitter</a></div>
+					</div>
+				</section>
+
+				<div class="divider"></div>
+
+				<div class="footer">
+					<div class="navbar">
+						<div class="navbar-container">
+							<div class="site-title-footer">Luca Zammitti<br> UX/UI and digital designer currently based in Milan</div>
+							<div class="site-title-footer">+39 3349707811<br>lucazammitti@outlook.com</div>
+						</div>
+					</div>
+				</div>
+				<br />
+			</div>
+		</div>
+
+
+
+
+		<script>
+			const scroll = new LocomotiveScroll({
+				el: document.querySelector("#js-scroll"),
+				smooth: true,
+				smoothMobile: true,
+				inertia: 0.75,
+			});
+		</script>
+		<script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const revealerNav = window.revealer({
+          revealElementSelector: ".nav-js",
+          options: {
+            anchorSelector: ".nav-btn-js",
+          },
+        });
+
+        const actionBtn = document.querySelector(".nav-btn-js");
+        actionBtn.addEventListener("click", () => {
+          if (!revealerNav.isRevealed()) {
+            revealerNav.reveal();
+            actionBtn.setAttribute("data-open", true);
+          } else {
+            revealerNav.hide();
+            actionBtn.setAttribute("data-open", false);
+          }
+        });
+      });
+    </script>
+
+
+		<div class="cursor">
+			<script>      const cursor = document.querySelector('.cursor');
+	
+				document.addEventListener('mousemove', e => {
+						cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+				})
+			
+				document.addEventListener('click', () => {
+						cursor.classList.add("expand");
+			
+						setTimeout(() => {
+								cursor.classList.remove("expand");
+						}, 500)
+				})</script>
+		</div>
+	</body>
 </html>

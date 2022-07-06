@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Luca Zammitti</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+	</head>
+
+	<body id="js-scroll">
+		<div class="wrapper">
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-container">
+						<div class="site-title"><a href="/index.html">zeta.design</a></div>
+            <div class="site-title">About me</div>
+            
+						<header>
+							<div>
+								<button class="header__button nav-btn-js" type="button"></button>
+								<nav class="header__nav nav-js" data-active="false">
+									<ul class="header__menu">
+										<li class="header__menu-item"><a href="/index.html">Home</a></li>
+										<li class="header__menu-item"><a href="#">All projects</a></li>
+										<li class="header__menu-item"><a href="/about.html">About me</a></li>
+									</ul>
+								</nav>
+							</div>
+						</header>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="section-header">
+					<div class="section-header-container">
+					</div>
+				</div>
+				<section class="about">
+					<div class="about-container">
+						<p class="about-intro-about-me">I’m Luca Zammitti, a 24 years old student and visual designer from Italy and based in Milan. Design and the digital field in general are two of my biggest passions since I was a child. I always tried to experiment and create as much as I could with new tools and softwares, in order to create something which was useful, functional and good-looking. Thanks to my early humanistic studies, today I’m able to unite and blend both the digital world with the artistic one, combining emotions and rationality. I’m also deeply interested in politics and social issues, because I truly believe that the designer should be the mean to visually translating solutions in order to solve problems and improve people’s life.
+              My student career begins in 2016 in Catania, the city I was born in, at the Academy of Fine Arts (ABACT), where I studied Visual Communication Design for five years. After that, I enrolled at the Scuola Politecnica di Design for the Master in Web and Digital Design,
+              while working as a freelance.</p>
+					</div>
+				</section>
+				
+
+				<div class="divider"></div>
+
+				<section class="socials">
+					<div class="socials-container">
+					
+						<div class="socials-id"><a href="">Instagram</a></div>
+						<div class="socials-id"><a href="">Facebook</a></div>
+						<div class="socials-id"><a href="">Twitter</a></div>
+					</div>
+				</section>
+
+				<div class="divider"></div>
+
+				<div class="footer">
+					<div class="navbar">
+						<div class="navbar-container">
+							<div class="site-title-footer">Luca Zammitti<br> UX/UI and digital designer currently based in Milan</div>
+							<div class="site-title-footer">+39 3349707811<br>lucazammitti@outlook.com</div>
+						</div>
+					</div>
+				</div>
+				<br />
+			</div>
+		</div>
+
+		<script>
+			const scroll = new LocomotiveScroll({
+				el: document.querySelector("#js-scroll"),
+				smooth: true,
+				smoothMobile: true,
+				inertia: 0.75,
+			});
+		</script>
+		<script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const revealerNav = window.revealer({
+          revealElementSelector: ".nav-js",
+          options: {
+            anchorSelector: ".nav-btn-js",
+          },
+        });
+
+        const actionBtn = document.querySelector(".nav-btn-js");
+        actionBtn.addEventListener("click", () => {
+          if (!revealerNav.isRevealed()) {
+            revealerNav.reveal();
+            actionBtn.setAttribute("data-open", true);
+          } else {
+            revealerNav.hide();
+            actionBtn.setAttribute("data-open", false);
+          }
+        });
+      });
+    </script>
+		<div class="cursor">
+			<script>      const cursor = document.querySelector('.cursor');
+	
+				document.addEventListener('mousemove', e => {
+						cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+				})
+			
+				document.addEventListener('click', () => {
+						cursor.classList.add("expand");
+			
+						setTimeout(() => {
+								cursor.classList.remove("expand");
+						}, 500)
+				})</script>
+		</div>
+	</body>
+</html>

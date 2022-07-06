@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Luca Zammitti</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+	</head>
+
+	<body id="js-scroll">
+		<div class="wrapper">
+			<div class="container">
+				<div class="navbar">
+					<div class="navbar-container">
+						<div class="site-title"><a href="/index.html">zeta.design</a></div>
+            <div class="site-title">Costa del Mar</div>
+            <div class="site-title">Made for SPD</div>
+            <div class="site-title">2022</div>
+						<header>
+							<div>
+								<button class="header__button nav-btn-js" type="button"></button>
+								<nav class="header__nav nav-js" data-active="false">
+									<ul class="header__menu">
+										<li class="header__menu-item"><a href="/index.html">Home</a></li>
+										<li class="header__menu-item"><a href="#">All projects</a></li>
+										<li class="header__menu-item"><a href="/about.html">About me</a></li>
+									</ul>
+								</nav>
+							</div>
+						</header>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="section-header">
+					<div class="section-header-container">
+					</div>
+				</div>
+				<section class="about">
+					<div class="about-container">
+						<p class="about-intro-about-me">The main goal of the project was to redesign specific sections of the website "Costa del Mar", an e-commerce selling eyeglasses and sunglasses from the Luxottica brand. The redesign I made consisted in changing and improving the user experience of the homepage of the website.</p>
+					</div>
+				</section>
+        
+				
+
+				<div class="divider"></div>
+        <section class="about">
+					<div class="about-container">
+						<img class="cdm-img-one" src="/images/cdm.png" style="width: 600px;">
+            <img class="cdm-img-one" src="/images/cdm.png" style="width: 600px;">
+            <img class="cdm-img-one" src="/images/cdm.png" style="width: 600px;">
+					</div>
+				</section>
+        <div class="divider"></div>
+
+				<section class="socials">
+					<div class="socials-container">
+					
+						<div class="socials-id"><a href="">Instagram</a></div>
+						<div class="socials-id"><a href="">Facebook</a></div>
+						<div class="socials-id"><a href="">Twitter</a></div>
+					</div>
+				</section>
+
+				<div class="divider"></div>
+
+				<div class="footer">
+					<div class="navbar">
+						<div class="navbar-container">
+							<div class="site-title-footer">Luca Zammitti<br> UX/UI and digital designer currently based in Milan</div>
+							<div class="site-title-footer">+39 3349707811<br>lucazammitti@outlook.com</div>
+						</div>
+					</div>
+				</div>
+				<br />
+			</div>
+		</div>
+
+		<script>
+			const scroll = new LocomotiveScroll({
+				el: document.querySelector("#js-scroll"),
+				smooth: true,
+				smoothMobile: true,
+				inertia: 0.75,
+			});
+		</script>
+		<script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const revealerNav = window.revealer({
+          revealElementSelector: ".nav-js",
+          options: {
+            anchorSelector: ".nav-btn-js",
+          },
+        });
+
+        const actionBtn = document.querySelector(".nav-btn-js");
+        actionBtn.addEventListener("click", () => {
+          if (!revealerNav.isRevealed()) {
+            revealerNav.reveal();
+            actionBtn.setAttribute("data-open", true);
+          } else {
+            revealerNav.hide();
+            actionBtn.setAttribute("data-open", false);
+          }
+        });
+      });
+    </script>
+		<div class="cursor">
+			<script>      const cursor = document.querySelector('.cursor');
+	
+				document.addEventListener('mousemove', e => {
+						cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+				})
+			
+				document.addEventListener('click', () => {
+						cursor.classList.add("expand");
+			
+						setTimeout(() => {
+								cursor.classList.remove("expand");
+						}, 500)
+				})</script>
+		</div>
+	</body>
+</html>
