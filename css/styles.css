@@ -20,6 +20,7 @@
 html,body {
 	overflow-x: hidden;
 	background: #171822;
+	cursor: none;
 }
 
 a {
@@ -111,8 +112,28 @@ a {
 	clear: both;
 }
 
-.about .about-container {
+.about {
 	width: 100%;
+}
+
+.about-me-description-title {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	font-size: 50px;
+	transition: all 0.7s;
+}
+
+.about-me-description-title:hover {
+	color: #a8ff05;
+	transition: all 0.7s;
+	transform: skew(-15deg);
+}
+
+
+
+.about-container {
+	display: flex;
+	justify-content: center;
 }
 
 .about-intro {
@@ -309,6 +330,11 @@ a {
 		text-align: justify;
 	}
 }
+
+.nav-logo {
+	width: 70px;
+}
+
 
 
 

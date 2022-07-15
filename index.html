@@ -15,14 +15,13 @@
 			<div class="container">
 				<div class="navbar">
 					<div class="navbar-container">
-						<div class="site-title"><a href="/index.html">zeta.design</a></div>
+						<div class="site-title"><a href="/index.html"><img class="nav-logo" src="/images/main_logo.png"></div></a>
 						<header>
 							<div>
 								<button class="header__button nav-btn-js" type="button"></button>
 								<nav class="header__nav nav-js" data-active="false">
 									<ul class="header__menu">
 										<li class="header__menu-item"><a href="/index.html">Home</a></li>
-										<li class="header__menu-item"><a href="#">All projects</a></li>
 										<li class="header__menu-item"><a href="/about.html">About me</a></li>
 									</ul>
 								</nav>
@@ -170,7 +169,7 @@
 			<script>      const cursor = document.querySelector('.cursor');
 	
 				document.addEventListener('mousemove', e => {
-						cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+						cursor.setAttribute("style", "top: "+(e.clientY - 10)+"px; left: "+(e.clientX - 10)+"px;")
 				})
 			
 				document.addEventListener('click', () => {
